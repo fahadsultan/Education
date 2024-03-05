@@ -1,0 +1,50 @@
+<html>
+  <head>
+    <title>Custom Symbols (Marker)</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+
+    <link rel="stylesheet" type="text/css" href="./style.css" />
+    <script type="module" src="./index.js"></script>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <!-- Import jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <div id="floating-panel">
+        <!-- <h2>SUCCESS AND PARTICIPATION OF<br/>UNDERREPRESENTED STUDENTS<br/>IN COMPUTER SCIENCE:</h2><hr/> -->
+        <h3>Choose a demographic:</h3>
+        <label class="container">Black students
+          <input type="radio" name="radio" checked="checked" value="black" onclick="initMap()">
+          <span class="checkmark"></span>
+        </label>
+        <label class="container">Hispanic students
+          <input type="radio" name="radio" value="hispanic" onclick="initMap()">
+          <span class="checkmark"></span>
+        </label>
+        <label class="container">Female students
+          <input type="radio" name="radio" value="women" onclick="initMap()">
+          <span class="checkmark"></span>
+        </label>
+    
+        <hr/>
+        <button onclick="location.href='https://arxiv.org/pdf/2311.14891.pdf'" href="">Read the Paper</button>
+        
+      </div>
+
+      <div id="legend">
+        <b>Legend:</b><br/><br/>
+        <span class="dot" style="background-color: #2b83ba;"></span> Quadrant 1 (CS > 0 and Non-CS > 0)<br/>
+        <span class="dot" style="background-color: #abdda4;"></span> Quadrant 2 (CS > 0 and Non-CS < 0)<br/>
+        <span class="dot" style="background-color: #d7191c;"></span> Quadrant 3 (CS < 0 and Non-CS < 0)<br/>
+        <span class="dot" style="background-color: #fdae61;"></span> Quadrant 4 (CS < 0 and Non-CS > 0)<br/><br/>
+        <i>CS: Computer Science</i>
+      </div>
+    <div id="map"></div>
+
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDAACd_oTrV0i8LlICe3P_oOhOTTwwoQaw&callback=initMap&v=weekly"
+      defer
+    ></script>
+
+  </body>
+</html>
