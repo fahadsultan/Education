@@ -10,11 +10,15 @@ function processData(uni) {
     }
 
     const svgMarker = {
-        path: "M 0,0 A 5,5 0 1,1 0,-1 Z",
+        // path: "M496 128v16a8 8 0 0 1-8 8h-24v12c0 6.627-5.373 12-12 12H60c-6.627 0-12-5.373-12-12v-12H24a8 8 0 0 1-8-8v-16a8 8 0 0 1 4.941-7.392l232-88a7.996 7.996 0 0 1 6.118 0l232 88A8 8 0 0 1 496 128zm-24 304H40c-13.255 0-24 10.745-24 24v16a8 8 0 0 0 8 8h464a8 8 0 0 0 8-8v-16c0-13.255-10.745-24-24-24zM96 192v192H60c-6.627 0-12 5.373-12 12v20h416v-20c0-6.627-5.373-12-12-12h-36V192h-64v192h-64V192h-64v192h-64V192H96z",
+        // path: "M5 8V17.0192M9 8V17M15 8V17M19 8V17.0192M5 17.0192C5.31428 17 5.70173 17 6.2 17H17.8C18.2983 17 18.6857 17 19 17.0192M5 17.0192C4.60779 17.0431 4.32953 17.097 4.09202 17.218C3.71569 17.4097 3.40973 17.7157 3.21799 18.092C3 18.5198 3 19.0799 3 20.2V21H21V20.2C21 19.0799 21 18.5198 20.782 18.092C20.5903 17.7157 20.2843 17.4097 19.908 17.218C19.6705 17.097 19.3922 17.0431 19 17.0192M3 5.5V8H21V5.5L12 3L3 5.5Z",
+        path: "M16 6.28a1.23 1.23 0 0 0-.62-1.07l-6.74-4a1.27 1.27 0 0 0-1.28 0l-6.75 4a1.25 1.25 0 0 0 0 2.15l1.92 1.12v2.81a1.28 1.28 0 0 0 .62 1.09l4.25 2.45a1.28 1.28 0 0 0 1.24 0l4.25-2.45a1.28 1.28 0 0 0 .62-1.09V8.45l1.24-.73v2.72H16V6.28zm-3.73 5L8 13.74l-4.22-2.45V9.22l3.58 2.13a1.29 1.29 0 0 0 1.28 0l3.62-2.16zM8 10.27l-6.75-4L8 2.26l6.75 4z",
+        // path: "M 0,0 A 5,5 0 1,1 0,-1 Z",
         fillColor: quad_colors[uni.quadrant],
         fillOpacity: 0.7,
         strokeWeight: 1,
         rotation: 0,
+        // scale: 0.1,
         scale: parseInt(uni.INSTSIZE)/1.5,
         anchor: new google.maps.Point(0, 20),
     };
@@ -67,13 +71,14 @@ function initMap() {
         markers[i].setMap(null);
     }
     const center = new google.maps.LatLng(40.12143973732901, -102.60036377442854);
-    // const center = new google.maps.LatLng(39.38413351668238, -99.85744532666118);
     
     if (map == null){
+
         map = new google.maps.Map(document.getElementById("map"), {
             zoom: 5,
             center: center,
-          });      
+        });   
+
         map.setOptions({styles:[
             {
               elementType: "geometry",
@@ -161,7 +166,7 @@ function initMap() {
               elementType: "labels.text.fill",
               stylers: [{ color: "#9e9e9e" }],
             },
-          ]});
+        ]});
     }
 
     // Get the selected demo 

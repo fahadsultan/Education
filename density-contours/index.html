@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<title>Density contours</title>
+<link rel="stylesheet" type="text/css" href="./inspector.css">
+<link rel="stylesheet" type="text/css" href="./style.css">
+
+<script src="https://d3js.org/d3.v7.min.js"></script>
+
+<script src="./index.js"></script>
+
+<body>
+    <div id="floating-panel">
+        <!-- <h2>SUCCESS AND PARTICIPATION OF<br/>UNDERREPRESENTED STUDENTS<br/>IN COMPUTER SCIENCE:</h2><hr/> -->
+        <h3>Choose a demographic:</h3>
+        <label class="container">Black students
+          <input type="radio" name="radio" checked="checked" value="black" onclick="makePlot()">
+          <span class="checkmark"></span>
+        </label>
+        <label class="container">Hispanic students
+          <input type="radio" name="radio" value="hispanic" onclick="makePlot()">
+          <span class="checkmark"></span>
+        </label>
+        <label class="container">Female students
+          <input type="radio" name="radio" value="women" onclick="makePlot()">
+          <span class="checkmark"></span>
+        </label>
+    
+        <hr/>
+        <center>
+            <button onclick="location.href='../src/Gmaps/'" href=""><b>Return to Map</b></button>
+        </center>
+      </div>
+</body>

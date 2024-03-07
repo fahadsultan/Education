@@ -10,6 +10,13 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   </head>
   <body>
+
+    <div class="header">
+      <img src="../../logo.png" id="logo">
+      <span id="title"><b>Participation and Success of Underrepresented Students in Computer Science</b></span>
+      <button onclick="location.href='https://arxiv.org/pdf/2311.14891.pdf'"><b>Read Paper</b></button>
+    </div>
+
     <div id="floating-panel">
         <!-- <h2>SUCCESS AND PARTICIPATION OF<br/>UNDERREPRESENTED STUDENTS<br/>IN COMPUTER SCIENCE:</h2><hr/> -->
         <h3>Choose a demographic:</h3>
@@ -25,20 +32,29 @@
           <input type="radio" name="radio" value="women" onclick="initMap()">
           <span class="checkmark"></span>
         </label>
-    
         <hr/>
-        <button onclick="location.href='https://arxiv.org/pdf/2311.14891.pdf'" href="">Read the Paper</button>
-        
+        <h3>Legend:</h3>
+        <!-- <b>Legend:</b><br/><br/> -->
+        <span class="dot" style="background-color: #2b83ba;"></span> Quadrant 1 (CS > 0 and Non-CS > 0)<br/>
+        <span class="dot" style="background-color: #abdda4;"></span> Quadrant 2 (CS > 0 and Non-CS < 0)<br/>
+        <span class="dot" style="background-color: #d7191c;"></span> Quadrant 3 (CS < 0 and Non-CS < 0)<br/>
+        <span class="dot" style="background-color: #fdae61;"></span> Quadrant 4 (CS < 0 and Non-CS > 0)<br/><br/>
+        <i>CS: Computer Science</i>
+
+        <hr/>
+        <center>
+          <button onclick="location.href='../../density-contours/'" href=""><b>Open Quadrants Plot</b></button>
+        </center>
       </div>
 
-      <div id="legend">
+      <!-- <div id="legend">
         <b>Legend:</b><br/><br/>
         <span class="dot" style="background-color: #2b83ba;"></span> Quadrant 1 (CS > 0 and Non-CS > 0)<br/>
         <span class="dot" style="background-color: #abdda4;"></span> Quadrant 2 (CS > 0 and Non-CS < 0)<br/>
         <span class="dot" style="background-color: #d7191c;"></span> Quadrant 3 (CS < 0 and Non-CS < 0)<br/>
         <span class="dot" style="background-color: #fdae61;"></span> Quadrant 4 (CS < 0 and Non-CS > 0)<br/><br/>
         <i>CS: Computer Science</i>
-      </div>
+      </div> -->
     <div id="map"></div>
 
     <script
