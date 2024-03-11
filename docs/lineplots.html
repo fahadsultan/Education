@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<title>Density contours</title>
+<link rel="stylesheet" type="text/css" href="./inspector.css">
+<link rel="stylesheet" type="text/css" href="./lineplots.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://d3js.org/d3.v7.min.js"></script>
+
+<script src="./lineplots.js"></script>
+
+<body>
+
+  <div class="header">
+    <img src="logo.png" id="logo">
+    <span id="title"><b>Participation and Success of Underrepresented Students in Computer Science</b></span>
+    <button onclick="location.href='https://arxiv.org/pdf/2311.14891.pdf'"><b>Read Paper</b></button>
+  </div>
+
+  <div id="floating-panel">
+      <!-- <h2>SUCCESS AND PARTICIPATION OF<br/>UNDERREPRESENTED STUDENTS<br/>IN COMPUTER SCIENCE:</h2><hr/> -->
+      <h3>Choose the metric:</h3>
+      <label class="container">Absolute count
+        <input type="radio" name="metric" checked="checked" value="abs_count" onclick="readData()">
+        <span class="checkmark"></span>
+      </label>
+      <label class="container">Percentage
+        <input type="radio" name="metric" value="percentage" onclick="readData()">
+        <span class="checkmark"></span>
+      </label>
+      <hr/>
+      <h3>Choose a demographic:</h3>
+      <label class="container">Black students
+        <input type="radio" name="demo" checked="checked" value="black" onclick="readData()">
+        <span class="checkmark"></span>
+      </label>
+      <label class="container">Hispanic students
+        <input type="radio" name="demo" value="hispanic" onclick="readData()">
+        <span class="checkmark"></span>
+      </label>
+      <label class="container">Female students
+        <input type="radio" name="demo" value="women" onclick="readData()">
+        <span class="checkmark"></span>
+      </label>
+
+      <hr/>
+      <h3>Legend:</h3>
+      <!-- <b>Legend:</b><br/><br/> -->
+      <span class="dot" style="background-color: #2b83ba;"></span> Other Areas of Study<br/>
+      <span class="dot" style="background-color: #fdae61;"></span> Computer Science<br/><br/>
+      <hr/>
+    
+      <center>
+          <button onclick="location.href='index.html'" href=""><b>Return to Map</b></button>
+      </center>
+  </div>
+</body>

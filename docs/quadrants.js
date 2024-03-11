@@ -31,7 +31,7 @@ function makePlot(){
 
         // Specify the dimensions of the chart.
         const width = 1200;
-        const height = 800;
+        const height = 700;
         const marginTop = 20;
         const marginRight = 30;
         const marginBottom = 30;
@@ -129,7 +129,6 @@ function makePlot(){
         // Add info window to the dots
         svg.selectAll(".uni_icon")
             .on("mouseover", function(event, d) {
-                console.log(d);
 
                 //Add the tooltip
                 d3.select(this)
