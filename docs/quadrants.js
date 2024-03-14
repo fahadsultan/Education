@@ -68,7 +68,7 @@ function makePlot(){
 
         // Append the axes.
         svg.append("g")
-            .attr("transform", `translate(0,${height - marginBottom})`)
+            .attr("transform", `translate(-100,${height - marginBottom})`)
             .call(d3.axisBottom(x).tickSizeOuter(0))
             .call(g => g.select(".domain").remove())
             .call(g => g.select(".tick:last-of-type text").clone()
@@ -76,7 +76,7 @@ function makePlot(){
             .attr("dy", null)
             .attr("font-weight", "bold")
             .attr("font-size", "20")
-            .text("Computer Science statistic"));
+            .text("Non-CS coefficient"));
 
         svg.append("g")
             .attr("transform", `translate(${marginLeft},0)`)
@@ -87,7 +87,7 @@ function makePlot(){
             .attr("text-anchor", "start")
             .attr("font-weight", "bold")
             .attr("font-size", "20")
-            .text("Non-Computer Science statistic"));
+            .text("CS coefficient"));
 
         // Append the contours.
         svg.append("g")
